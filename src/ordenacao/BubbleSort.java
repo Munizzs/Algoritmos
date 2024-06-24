@@ -8,8 +8,8 @@ public class BubbleSort {
         List<Integer> numbersList = Arrays.asList(9,1,5,10,8,2,4,7,3,6);
         int[] numbersArray = {9,1,5,10,8,2,4,7,3,6};
 
-        int[] sortNumbersArray = arraySort(numbersArray);
-        List<Integer> sortNumbersList = arraySort(numbersList);
+        int[] sortNumbersArray = sort(numbersArray);
+        List<Integer> sortNumbersList = sort(numbersList);
 
         for(int i : sortNumbersArray){
             System.out.println(i);
@@ -20,7 +20,7 @@ public class BubbleSort {
         }
     }
 
-    private static int[] arraySort(int[]arr){
+    private static int[] sort(int[]arr){
         for(int j = 0;j< arr.length;j++){
             for (int i = 0; i < arr.length - 1 - j; i++) {
                 if (arr[i] > arr[i + 1]) {
@@ -33,7 +33,7 @@ public class BubbleSort {
         return arr;
     }
 
-    private static List<Integer> arraySort(List<Integer>arr){
+    private static List<Integer> sort(List<Integer>arr){
         for(int j =0;j<arr.size()-1;j++){
             for(int i = 0;i<arr.size()-1;i++){
                 if(arr.get(i)>arr.get(i+1)){
